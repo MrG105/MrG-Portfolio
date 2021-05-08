@@ -4,6 +4,8 @@
 :root{
   --Blueish:#587ad8;
   --tan:#f6e9c9;
+  --heliotrope:#e866ec;
+  --white:#ffff;
 
 }
 body {
@@ -38,10 +40,9 @@ div {
 }
 nav {
     display: flex;
-    /* flex-flow: row wrap; */
     flex: 1 0 0;
     background-color: var(--tan);
-    /* justify-content:center; */
+    justify-content:flex-end;
     padding:0px;
     font-size:125%;
 }
@@ -75,7 +76,7 @@ nav a {
     background-image:url("../images/mountains.jpg");
     color:navy;
 }
-.subtitle {
+h2 {
     display:flex;
     float:left;
     align-self: flex-end;
@@ -112,7 +113,6 @@ nav a {
 
 .card-1 img {
   width: 100%;
-  /* min-width: 400px; */
 }
 .card {
   flex: 1 0 0;
@@ -140,13 +140,26 @@ nav a {
   width: 100%;
   /* min-width: 400px; */
 }
+
+.card-1:hover,
+.card-1:hover .card-1-header {
+  box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
+  transition: all .2s ease-in-out;
+  transform: scale(1.1);
+}
+.card:hover,
+.card:hover .card-header {
+  box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
+  transition: all .2s ease-in-out;
+  transform: scale(1.1);
+}
 @media screen and (max-width: 768px) {
-    /* Use flex-direction to stack the navbar, sidebar, and body */
+    /* Use flex-direction to stack the navbar,h2, and body */
     .container {
       flex-direction: column;
       margin-left:0;
     }
-    .subtitle {
+    .h2 {
       float:none;
     }
     
