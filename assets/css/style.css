@@ -9,16 +9,17 @@
 
 }
 body {
-    font-family: Arial;
-    margin: 0;
+  font-family: Arial;
+  margin: 0;
 }
   
 header {
-    padding: 40px 0 0;
-    text-align: center;
-    background: #13293d;
-    color: #fff;
+  padding: 1rem 0 0;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
 }
+
 p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: 2%;
@@ -28,6 +29,18 @@ h1 {
   font-size:48px;
 }
 
+/* Section Headings */
+h2 {
+  display:flex;
+  float:left;
+  align-self: flex-end;
+  justify-content:center;
+  font-size:200%;
+  margin-top:33px;
+  margin-right:10px;
+}
+
+/* First Letter Coloration */
 .G {
   color:var(--Blueish);
 }
@@ -39,51 +52,54 @@ div {
   margin:10px;
 }
 nav {
-    display: flex;
-    flex: 1 0 0;
-    background-color: var(--tan);
-    justify-content:flex-end;
-    padding:0px;
-    font-size:125%;
-}
- 
-nav a:hover {
-    color: #fff;
+  display: flex;
+  flex: 1 0 0;
+  background-color: var(--tan);
+  justify-content:flex-end;
+  padding:0px;
+  font-size:125%;
 }
 
 nav ul {
-    display:flex;
-    flex-flow: row wrap;
-    justify-content:center;
-    min-width:24%;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content:center;
+  min-width:24%;
 }
 
-nav a {
-    color:var(--Blueish);
-    font-weight: bold;
-    text-decoration:none;
-    text-align:center;
-    padding: 14px;
+a {
+  color:var(--Blueish);
+  font-weight: bold;
+  text-decoration:none;
+  text-align:center;
+  padding: 14px;
+}
+ 
+a:hover {
+    color: #fff;
 }
 
+ul, h3 {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content:space-evenly;
+  min-width:24%;
+  font-size:150%;
+}
+
+li, h3 {
+  padding-top:2%;
+}
+/* Big Picture Thing */
 .brand {
-    display:flex;
-    flex-direction:column;
-    padding: 1%;
-    height: 400px;
-    background-size:cover;
-    background-position:center;
-    background-image:url("../images/mountains.jpg");
-    color:navy;
-}
-h2 {
-    display:flex;
-    float:left;
-    align-self: flex-end;
-    justify-content:center;
-    font-size:200%;
-    margin-top:33px;
-    margin-right:10px;
+  display:flex;
+  flex-direction:column;
+  padding: 1%;
+  height: 400px;
+  background-size:cover;
+  background-position:center;
+  background-image:url("../images/mountains.jpg");
+  color:navy;
 }
 
 .container {
@@ -92,6 +108,7 @@ h2 {
   flex-flow:row wrap;
   justify-content: space-around;  
 }
+/* Portfolio Work Section */
 .card-1 {
   padding: 10px;
   text-align: center;
@@ -100,20 +117,6 @@ h2 {
   margin:5px;
 }
 
-.card-1 header {
-  position:absolute;
-  width:6rem;
-  height:4rem;
-  margin: -1rem 0 1.5rem 0;
-  padding:0.5rem 1rem;
-  background: #13293d;
-  color: #fff;
-  border-radius:8px;
-}
-
-.card-1 img {
-  width: 100%;
-}
 .card {
   flex: 1 0 0;
   display:flex;
@@ -125,7 +128,7 @@ h2 {
   min-width:45%;
 }
 
-.card header {
+.card header, .card-1 header {
   position:absolute;
   width:6rem;
   height:4rem;
@@ -136,9 +139,8 @@ h2 {
   border-radius:8px;
 }
 
-.card img {
+.card img, .card-1 img {
   width: 100%;
-  /* min-width: 400px; */
 }
 
 .card-1:hover,
@@ -153,23 +155,18 @@ h2 {
   transition: all .2s ease-in-out;
   transform: scale(1.1);
 }
+
+/* Responsive Design Changes */
 @media screen and (max-width: 768px) {
-    /* Use flex-direction to stack the navbar,h2, and body */
     .container {
       flex-direction: column;
       margin-left:0;
     }
-    .h2 {
+    h2 {
       float:none;
     }
-    
-    /* Change the header background */
-    header {
-      background: #772014;
-    }
-    /* Change the navbar and footer background */
-    nav,
-    footer {
-      background-color: #bb8588;
+    ul {
+      flex-direction:column;
+      align-items: center;
     }
 }
