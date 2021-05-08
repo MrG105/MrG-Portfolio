@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+:root{
+  --Blueish:#587ad8;
+
+}
+body {
+    font-family: Arial;
+    margin: 0;
+}
+  
+header {
+    padding: 40px 0 0;
+    text-align: center;
+    background: #13293d;
+    color: #fff;
+}
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1 {
+  display:inline-block;
+  font-size:48px;
+}
+
+.G {
+  color:var(--Blueish);
+}
+
+div {
+  margin: 0 auto;
+  background-color: #f6e9c9;
+  min-height:100px;
+  margin:10px;
+}
+nav {
+    display: flex;
+    background-color: #d8a47f;
+    justify-content:center;
+    padding:0px;
+}
+ 
+nav a:hover {
+    color: #fff;
+}
+
+nav ul {
+    display:flex;
+    justify-content:center;
+    min-width:300px;
+}
+
+nav a {
+    color:var(--Blueish);
+    font-weight: bold;
+    text-decoration:none;
+    text-align:center;
+    padding: 14px;
+}
+
+.brand {
+    display:flex;
+    flex-direction:column;
+    padding: 1%;
+    height: 400px;
+    background-size:cover;
+    background-position:center;
+    background-image:url("../images/mountains.jpg");
+    color:navy;
+}
+#subtitle {
+    display:flex;
+    float:left;
+    align-self: flex-end;
+    justify-content:center;
+    font-size:200%;
+    margin-top:33px;
+}
+
+@media screen and (max-width: 768px) {
+    /* Use flex-direction to stack the navbar, sidebar, and body */
+    main,
+    nav {
+      flex-direction: column;
+    }
+    /* Make the sidebar stack below the body */
+    aside {
+      order: 2;
+    }
+    /* Change the header background */
+    header {
+      background: #772014;
+    }
+    /* Change the navbar and footer background */
+    nav,
+    footer {
+      background-color: #bb8588;
+    }
+}
