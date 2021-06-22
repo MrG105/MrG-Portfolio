@@ -142,6 +142,7 @@ li, h3 {
 
 .card img, .card-1 img {
   width: 100%;
+  justify-content:center;
 }
 
 .card-1:hover,
